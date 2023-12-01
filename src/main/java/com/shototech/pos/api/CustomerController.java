@@ -1,5 +1,6 @@
 package com.shototech.pos.api;
 
+import com.shototech.pos.db.Database;
 import com.shototech.pos.dto.requst.RequestCustomerDto;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +12,7 @@ public class CustomerController {
     public String createCustomer(
             @RequestBody RequestCustomerDto customerDto
     ){
-        return "createCustomer";
+        return  Database.createCustomer(customerDto).toString();
     }
 
     @PutMapping
