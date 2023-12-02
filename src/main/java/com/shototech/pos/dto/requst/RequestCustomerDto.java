@@ -1,14 +1,12 @@
 package com.shototech.pos.dto.requst;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class RequestCustomerDto {
     private String name;
     private String address;

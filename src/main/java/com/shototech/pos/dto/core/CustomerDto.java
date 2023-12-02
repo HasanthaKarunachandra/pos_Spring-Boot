@@ -1,14 +1,14 @@
 package com.shototech.pos.dto.core;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
+import java.sql.Blob;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class CustomerDto {
     private long id;
     private long publicId;
@@ -16,4 +16,8 @@ public class CustomerDto {
     private String address;
     private double salary;
     private boolean activeState;
+    private Blob fileName;
+    private Blob resourceUrl;
+    private Blob directory;
+    private Blob hash;
 }
